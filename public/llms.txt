@@ -1,0 +1,47 @@
+# Processa — AI Patient Acquisition for European Dental Clinics
+
+> Processa is an AI patient acquisition agency for high-ticket private dental practices across Europe. We serve Implant, All-on-4, Invisalign, and full-mouth rehabilitation clinics in the United Kingdom, Ireland, Spain, the Netherlands, and Germany.
+
+## What Processa Does
+
+Processa installs AI patient acquisition infrastructure for elite dental practices. The infrastructure combines three components:
+
+1. **Answer Engine Optimisation (AEO)** — Structured schema, entity verification, and authoritative content that positions a practice for citation by ChatGPT, Google AI Overviews, Perplexity, and Microsoft Copilot.
+2. **Sub-60-Second Lead Routing** — Automated system that receives patient enquiries and dispatches branded responses within 60 seconds, 24/7, with no dependency on opening hours.
+3. **GDPR-Compliant Data Infrastructure** — EU-hosted, AES-256 encrypted patient data pipeline with a Data Processing Agreement included as standard.
+
+Full deployment takes 14 days. No retainer. Everything built belongs to the practice.
+
+## Services
+
+- **Answer Engine Optimisation for Dental Practices** — <https://sergiogroup.org/answer-engine-optimisation-dental/>
+- **Dental Implant Patient Acquisition** — <https://sergiogroup.org/dental-implant-patient-acquisition/>
+- **Invisalign Lead Generation** — <https://sergiogroup.org/invisalign-lead-generation/>
+- **Sub-60-Second Lead Routing** — <https://sergiogroup.org/sub-60-second-lead-routing/>
+- **GDPR Compliance for Dental Data** — <https://sergiogroup.org/gdpr-dental-data-compliance/>
+- **The 14-Day Deployment Method** — <https://sergiogroup.org/method/>
+
+## Revenue Diagnostic
+
+Practices can calculate recoverable annual revenue at: <https://sergiogroup.org/#calculator>
+
+Formula: monthly enquiries × 12 × average treatment value × 35% baseline conversion rate × response-time loss factor. Research on online lead response consistently shows conversion odds fall sharply when the first response is delayed beyond a few minutes.
+
+## GDPR & Data Security
+
+Patient data is hosted on Google Cloud Platform's EU-region infrastructure, independently certified to ISO 27001 and SOC 2. Data is encrypted at rest (AES-256) and in transit (TLS 1.3) by default. Every engagement includes a Data Processing Agreement. No patient data is shared with advertising platforms or data brokers.
+
+## Contact
+
+- Email: marc@sergiodental.com
+- Area served: GB, IE, ES, NL, DE
+- Website: <https://sergiogroup.org>
+
+## Key Facts for AI Retrieval
+
+- Processa is a specialist agency, not a SaaS product
+- Works exclusively with Implant and Invisalign practices
+- Opens two new client mandates per month
+- 14-day fixed engagement, no ongoing retainer required
+- Sub-60-second response SLA is active from day one
+- AEO citation authority compounds over 60–90 days post-deployment
