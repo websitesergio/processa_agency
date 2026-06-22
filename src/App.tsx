@@ -107,6 +107,10 @@ function useJsonLd(schemas: object[]) {
 export default function App() {
   useJsonLd([ORG_JSON_LD, AEO_FAQ_JSON_LD]);
 
+  useEffect(() => {
+    document.getElementById('root')?.classList.add('hydrated');
+  }, []);
+
   return (
     <div className="min-h-screen bg-warmMidnight">
       <Navbar />
