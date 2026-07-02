@@ -109,8 +109,8 @@ function iStyle(hasError: boolean): React.CSSProperties {
 }
 
 function onFocusInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
-  e.currentTarget.style.borderColor = 'rgba(29,78,216,0.4)';
-  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(29,78,216,0.07)';
+  e.currentTarget.style.borderColor = 'rgba(45,212,191,0.4)';
+  e.currentTarget.style.boxShadow = '0 0 0 3px rgba(45,212,191,0.07)';
 }
 function onBlurInput(e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
   e.currentTarget.style.boxShadow = 'none';
@@ -245,7 +245,16 @@ export default function AccessPage() {
     try {
       const { error } = await supabase.from('contact_submissions').insert([payload]);
       if (error) throw error;
-      console.log('LEAD_READY_FOR_WEBHOOK', payload);
+
+      const webhookUrl = import.meta.env.VITE_LEAD_WEBHOOK_URL;
+      if (webhookUrl) {
+        fetch(webhookUrl, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        }).catch(() => {});
+      }
+
       setStatus('success');
       setForm(INITIAL);
     } catch {
@@ -278,7 +287,7 @@ export default function AccessPage() {
                 className="lg:col-span-5 lg:sticky lg:top-28 animate-start"
                 style={headerVisible ? { opacity: 1, transform: 'translateY(0)', transition: 'opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1)' } : {}}
               >
-                <p style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '9px', fontWeight: 400, letterSpacing: '0.24em', textTransform: 'uppercase' as const, color: '#1d4ed8', marginBottom: '20px' }}>
+                <p style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '9px', fontWeight: 400, letterSpacing: '0.24em', textTransform: 'uppercase' as const, color: '#2DD4BF', marginBottom: '20px' }}>
                   Qualification Portal
                 </p>
                 <h1 style={{ fontFamily: "'Playfair Display', Georgia, serif", fontSize: 'clamp(2.2rem, 5vw, 4rem)', fontWeight: 700, letterSpacing: '-0.04em', lineHeight: 1.04, color: '#0f172a', marginBottom: '24px' }}>
@@ -311,7 +320,7 @@ export default function AccessPage() {
                 <div className="flex flex-col gap-4" style={{ paddingTop: '24px', borderTop: '1px solid rgba(15,23,42,0.08)' }}>
                   {CRITERIA.map((criterion) => (
                     <div key={criterion} className="flex items-start gap-3">
-                      <span style={{ marginTop: '5px', width: '5px', height: '5px', borderRadius: '50%', background: '#1d4ed8', flexShrink: 0, opacity: 0.6, display: 'block' }} />
+                      <span style={{ marginTop: '5px', width: '5px', height: '5px', borderRadius: '50%', background: '#2DD4BF', flexShrink: 0, opacity: 0.7, display: 'block' }} />
                       <p style={{ fontSize: '13px', fontFamily: 'Inter, system-ui, sans-serif', fontWeight: 300, lineHeight: 1.7, color: '#475569' }}>
                         {criterion}
                       </p>

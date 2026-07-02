@@ -18,7 +18,7 @@ const PILLARS = [
     bullets: [
       'Instant branded response via SMS, WhatsApp or email',
       '24/7 operation independent of practice hours',
-      '391% higher conversion vs 30-minute response',
+      '~4× higher conversion: contacting a lead within 5 min vs 30+ min (Lead Response Management Study)',
     ],
     link: '/sub-60-second-lead-routing',
   },

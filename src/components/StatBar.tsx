@@ -1,5 +1,5 @@
 const STATS = [
-  { value: '78%', label: 'Conversion drop after 5 min delay' },
+  { value: '~4×', label: 'More likely to convert: <5 min vs 30+ min response' },
   { value: '<60s', label: 'Response SLA guaranteed' },
   { value: '£18k–£45k', label: 'Typical annual leakage' },
   { value: '14 days', label: 'Fixed deployment timeline' },

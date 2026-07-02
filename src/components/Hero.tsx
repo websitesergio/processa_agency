@@ -23,16 +23,16 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-5 py-24 md:py-32 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left: copy */}
         <div className="max-w-xl">
-          <p className="text-xs font-medium uppercase tracking-widest text-slate-400 mb-4 opacity-0 animate-fade-in-up">
+          <p className="text-xs font-medium uppercase tracking-widest text-slate-400 mb-4 animate-start-hidden animate-fade-in-up">
             AI Patient Acquisition Infrastructure
           </p>
-          <h1 className="text-h1 text-brand-light mb-6 opacity-0 animate-fade-in-up animate-delay-100">
+          <h1 className="text-h1 text-brand-light mb-6 animate-start-hidden animate-fade-in-up animate-delay-100">
             AI Patient Acquisition for European Dental Clinics
           </h1>
-          <p className="text-body text-slate-400 mb-8 max-w-prose opacity-0 animate-fade-in-up animate-delay-200">
+          <p className="text-body text-slate-400 mb-8 max-w-prose animate-start-hidden animate-fade-in-up animate-delay-200">
             Calculate the exact revenue your slow response time loses every year. Processa delivers sub-60-second lead routing and AI search citation for Implant and Invisalign practices.
           </p>
-          <div className="flex flex-wrap gap-4 opacity-0 animate-fade-in-up animate-delay-300">
+          <div className="flex flex-wrap gap-4 animate-start-hidden animate-fade-in-up animate-delay-300">
             <a href="#calculator" className="btn-primary">
               Calculate Your Leakage
             </a>
@@ -64,7 +64,7 @@ function DashboardMockup() {
 
       {/* Stat row */}
       <div className="grid grid-cols-3 gap-3 mb-6">
-        {['78%', '<60s', '14d'].map((val, i) => (
+        {['~4×', '<60s', '14d'].map((val, i) => (
           <div key={i} className="rounded-lg bg-brand-dark/60 border border-slate-700/30 p-3">
             <div className="text-brand-accent font-bold text-lg">{val}</div>
             <div className="h-1.5 w-12 rounded bg-slate-700/50 mt-1" />

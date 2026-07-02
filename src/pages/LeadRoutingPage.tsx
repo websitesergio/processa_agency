@@ -9,7 +9,7 @@ export default function LeadRoutingPage() {
       title="Sub-60-Second Lead Routing for Dental Practices"
       subtitle="Close the response-latency gap that research links to lost conversions. Every enquiry acknowledged and triaged within 60 seconds, 24/7."
       tldr={[
-        '391% higher conversion when leads are contacted within 5 minutes vs 30 minutes',
+        'Contacting a lead within 5 minutes vs 30+ minutes increases qualification odds ~4× (Lead Response Management Study)',
         'Automated routing operates 24/7 independent of practice opening hours',
         'Branded responses via SMS, WhatsApp, or email dispatched within 60 seconds',
       ]}
@@ -31,12 +31,12 @@ export default function LeadRoutingPage() {
       <section id="speed-matters" className="mb-16">
         <h2 className="text-h2 text-brand-dark mb-6">Why Speed Matters</h2>
         <div className="rounded-card border border-slate-200 bg-slate-50 p-5 mb-6 flex items-center gap-4">
-          <span className="text-3xl font-bold text-brand-accent">391%</span>
-          <span className="text-sm text-slate-600">Higher conversion probability when contacted within 5 minutes vs 30 minutes</span>
+          <span className="text-3xl font-bold text-brand-accent">~4×</span>
+          <span className="text-sm text-slate-600">More likely to convert when contacted within 5 minutes vs 30+ minutes</span>
         </div>
         <div className="space-y-4 text-body text-slate-600 max-w-prose">
           <p>
-            Research from Harvard Business Review shows a 391% higher conversion probability when a dental enquiry is contacted within 5 minutes versus 30 minutes. Lead conversion probability drops by 78% when response is delayed beyond five minutes.
+            Contacting a lead within 5 minutes vs 30+ minutes increases qualification odds approximately 4× (Lead Response Management Study). The window of decision intent is short: a patient who submits an enquiry for dental implants or Invisalign is at peak engagement in that moment. Delay erodes both their attention and their trust in your responsiveness.
           </p>
           <p>
             For a practice receiving 40 monthly high-ticket enquiries at £3,500 LTV, a 12-hour average response time represents £20,000-£40,000 in annual recoverable revenue lost to competitors who respond faster. This leakage is invisible on standard financial reports because it comprises patients who never booked, not patients who cancelled.

@@ -9,7 +9,7 @@ export default function DentalImplantPage() {
       title="Dental Implant Patient Acquisition for European Clinics"
       subtitle="High-ticket implant cases demand instant response and AI-first discovery. Processa routes qualified implant enquiries within 60 seconds."
       tldr={[
-        'Implant enquiries lose 78% conversion value when response exceeds 5 minutes',
+        'Contacting a lead within 5 minutes vs 30+ minutes increases qualification odds ~4× (Lead Response Management Study)',
         'AEO positions your clinic as the cited answer for high-intent implant queries',
         'Automated qualification pre-screens candidates before your coordinator responds',
       ]}
