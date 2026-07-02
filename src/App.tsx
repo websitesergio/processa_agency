@@ -13,46 +13,9 @@ import AccessPage from './pages/AccessPage';
 import PrivacyPage from './pages/PrivacyPage';
 import TermsPage from './pages/TermsPage';
 
-const ORG_JSON_LD = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  '@id': 'https://sergiogroup.org/#organization',
-  name: 'Processa',
-  url: 'https://sergiogroup.org',
-  logo: 'https://sergiogroup.org/favicon-192.png',
-  email: 'marc@sergiodental.com',
-  areaServed: [
-    { '@type': 'Country', name: 'GB' },
-    { '@type': 'Country', name: 'IE' },
-    { '@type': 'Country', name: 'ES' },
-    { '@type': 'Country', name: 'NL' },
-    { '@type': 'Country', name: 'DE' },
-  ],
-  knowsAbout: [
-    'Answer Engine Optimisation',
-    'Dental patient acquisition',
-    'Lead routing',
-    'GDPR compliance',
-    'Implant marketing',
-    'Invisalign lead generation',
-  ],
-};
-
 export default function App() {
   useEffect(() => {
     document.getElementById('root')?.classList.add('hydrated');
-  }, []);
-
-  useEffect(() => {
-    const el = document.getElementById('org-jsonld');
-    if (!el) {
-      const script = document.createElement('script');
-      script.id = 'org-jsonld';
-      script.type = 'application/ld+json';
-      script.textContent = JSON.stringify(ORG_JSON_LD);
-      document.head.appendChild(script);
-    }
-    return () => { document.getElementById('org-jsonld')?.remove(); };
   }, []);
 
   return (
