@@ -1,25 +1,23 @@
 import Hero from '../components/Hero';
-import CredibilityStrip from '../components/CredibilityStrip';
-import Calculator from '../components/Calculator';
-import ClinicalMethodology from '../components/ClinicalMethodology';
-import MathematicsOfSpeed from '../components/MathematicsOfSpeed';
-import MarketReality from '../components/MarketReality';
-import Process from '../components/Process';
-import FAQSection from '../components/FAQSection';
-import ContactForm from '../components/ContactForm';
+import StatBar from '../components/StatBar';
+import RevenueCalculator from '../components/RevenueCalculator';
+import ThreePillars from '../components/ThreePillars';
+import Timeline from '../components/Timeline';
+import Qualification from '../components/Qualification';
+import FAQAccordion from '../components/FAQAccordion';
+import CTABand from '../components/CTABand';
 
 export default function HomePage() {
   return (
-    <main id="main-content">
+    <main>
       <Hero />
-      <Calculator />
-      <CredibilityStrip />
-      <ClinicalMethodology />
-      <MathematicsOfSpeed />
-      <MarketReality />
-      <Process />
-      <FAQSection />
-      <ContactForm />
+      <StatBar />
+      <RevenueCalculator />
+      <ThreePillars />
+      <Timeline />
+      <Qualification />
+      <FAQAccordion />
+      <CTABand />
     </main>
   );
 }

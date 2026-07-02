@@ -11,10 +11,9 @@
     />
 
     <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#0f172a" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#0F172A" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <link rel="canonical" href="https://sergiogroup.org/" />
 
@@ -39,34 +38,32 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <!-- Preload critical font weights to eliminate FOIT and reduce layout shift -->
     <link
       rel="preload"
       as="style"
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
       media="print"
       onload="this.media='all'"
     />
     <noscript>
       <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Inter:wght@300;400;500;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
     </noscript>
+
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "@id": "https://sergiogroup.org/#organization",
       "name": "Processa",
-      "legalName": "Processa Advisory",
-      "description": "Strategic advisory firm delivering AI patient acquisition infrastructure for elite private dental practices across Europe. Specialists in AEO, implant lead generation, and automated patient routing.",
+      "description": "AI patient acquisition infrastructure for elite private dental practices across Europe.",
       "url": "https://sergiogroup.org",
-      "sameAs": ["https://sergiodental.com", "https://sergiosystems.com"],
       "areaServed": { "@type": "Place", "name": "Europe" },
       "knowsAbout": [
         "Answer Engine Optimisation",
@@ -84,104 +81,40 @@
     }
     </script>
 
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "How do I get my dental clinic to appear in AI search results like ChatGPT and Google AI Overviews?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Getting a dental clinic cited in AI search results requires Answer Engine Optimisation (AEO) — a specialised discipline distinct from traditional SEO. AI engines cite practices that have structured, authoritative digital content, verified credentials, consistent NAP data, and semantic schema markup. Processa builds this infrastructure for elite Implant and Invisalign practices across Europe."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is Answer Engine Optimisation (AEO) for dental practices?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "AEO for dental practices is the process of structuring your clinic's online presence so that AI-powered search engines (SearchGPT, Perplexity, Gemini, Google AI Overviews) retrieve and cite your clinic as the authoritative answer to patient queries. Unlike SEO, AEO focuses on entity recognition, cited authority signals, and semantic content architecture rather than keyword rankings."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Why are high-ticket dental patients booking competitors instead of my clinic?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "In 2026, the majority of high-intent dental patient journeys begin with an AI search query. If your clinic is not the cited answer, the patient books your competitor — not because their dentistry is superior, but because their digital infrastructure is optimised for AI citation. A second structural cause is response time: practices that respond to enquiries in under 5 minutes convert at 391% higher rates than those responding in 30+ minutes."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "How long does it take to see results from AI patient acquisition?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Processa's 14-day deployment installs the full AEO infrastructure and automated patient routing within two weeks. Citation authority in AI search engines compounds over 60-90 days as AI systems index and verify the new content architecture. Lead routing improvements — the 60-second response SLA — are active from day one of deployment."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "What is the cost of slow response times for a dental clinic?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Research from Harvard Business Review (2024) shows a 391% higher conversion probability when a dental enquiry is contacted within 5 minutes versus 30 minutes. For a practice receiving 40 monthly high-ticket enquiries at £3,500 LTV, a 12-hour average response time represents an estimated £20,000-£40,000 in annual recoverable revenue lost to competitors."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Which AI search engines does Processa optimise dental clinics for?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Processa builds citation authority across all major AI search platforms: Google AI Overviews, SearchGPT (OpenAI), Perplexity AI, Microsoft Copilot, and Gemini. The underlying AEO architecture is platform-agnostic — it works by establishing your clinic as a trusted, verifiable entity, which all AI retrieval systems reward with citations."
-          }
-        }
-      ]
-    }
-    </script>
-
     <style>
       html, body {
-        background: #080705;
-        color: #F5F2EC;
+        background: #0F172A;
+        color: #F8FAFC;
         font-family: Inter, system-ui, sans-serif;
         margin: 0;
         padding: 0;
       }
       #root {
         opacity: 0;
-        transition: opacity 0.2s ease-in;
+        transition: opacity 0.15s ease-in;
       }
       #root.hydrated {
         opacity: 1;
       }
+      #root > main { display: none; }
     </style>
   </head>
 
   <body>
     <div id="root">
-      <!-- Static semantic content for crawler indexability. React replaces this on hydration. -->
+      <!-- Static semantic content for crawler indexability. Hidden from users via CSS above. -->
       <main>
         <h1>AI Patient Acquisition for European Dental Clinics</h1>
-
         <h2>Calculate Your Recoverable Revenue</h2>
-        <p>Every high-intent patient who submits an enquiry for a dental implant or Invisalign treatment and receives no response within five minutes represents a quantifiable financial loss. Research across elective healthcare markets shows that lead conversion probability drops by 78 percent when response is delayed beyond five minutes. Processa's diagnostic engine calculates the precise annual revenue your practice is losing due to response latency — not an estimate, but a data-driven figure grounded in your own enquiry volume, case mix, and historical conversion rate. For a clinic receiving forty inbound implant or Invisalign enquiries per month at an average treatment value of £3,500, a typical four-to-twelve-hour response window represents between £18,000 and £45,000 in recoverable annual revenue. This leakage is invisible on standard financial reports because it comprises patients who never booked, not patients who cancelled. The first step is making this leakage visible.</p>
-        <p>Revenue recovery in private dental practices is achieved through infrastructure efficiency, not increased marketing spend. Processa combines Answer Engine Optimisation (AEO) to attract high-intent patients directly from AI search systems, with sub-60-second automated lead routing to convert those enquiries into booked consultations at the highest possible rate. The combination removes latency from your patient acquisition funnel and positions your practice for citation authority across ChatGPT, Google AI Overviews, Perplexity, and Microsoft Copilot. The result is measurable, sustained improvement in patient acquisition cost and consultation conversion rate.</p>
-
+        <p>Every high-intent patient who submits an enquiry for a dental implant or Invisalign treatment and receives no response within five minutes represents a quantifiable financial loss. Processa's diagnostic engine calculates the precise annual revenue your practice is losing due to response latency.</p>
         <h2>Answer Engine Optimisation for Dental Practices</h2>
-        <p>In 2026, the majority of high-intent dental patient journeys begin with a query to an AI search engine rather than traditional keyword search. A patient asks ChatGPT, "What is the best dental implant clinic in London?" or Perplexity, "Where should I get Invisalign in Europe?" These queries produce a single cited answer, not a list of ten options. If your practice is cited as that answer, the patient learns about your clinic at the moment they are most engaged in research. If your practice is not cited, a competitor appears in that position instead. Being the cited answer in AI search is not the same as ranking on page one of Google in traditional search. It is a competition for entity authority, not keyword position. Processa builds the semantic schema markup, entity verification signals, and authoritative content architecture that positions your practice for citation across every major AI platform operating in European markets.</p>
-        <p>Answer Engine Optimisation compounds over 60 to 90 days as AI systems index and verify your clinic's new content architecture. For practices investing in Google Ads or Meta advertising for implant and Invisalign patient acquisition, establishing organic citation authority through AEO provides a growing complement to paid channels. Patients cited your practice through AI search carry zero advertising cost and typically convert at higher rates than cold paid traffic because the AI citation carries implicit endorsement. The combination of AEO citation authority and paid advertising amplification produces the highest-efficiency patient acquisition environment in modern dental marketing.</p>
-
+        <p>In 2026, the majority of high-intent dental patient journeys begin with a query to an AI search engine. Processa builds the semantic schema markup, entity verification signals, and authoritative content architecture that positions your practice for citation across every major AI platform.</p>
         <h2>Sub-60-Second Lead Routing</h2>
-        <p>Lead routing is built to respond within 60 seconds, closing the response-latency gap that research links to lost conversions. When a patient submits an enquiry through your website, Google Ads landing page, or social media lead form, Processa's routing system immediately identifies the treatment type, selects the appropriate response template, and dispatches a branded, personalised message via SMS, WhatsApp, or email. A structured follow-up task is simultaneously queued for your patient coordinator with full lead context. This automation operates 24 hours a day, seven days a week, with no dependency on practice opening hours. Practices operating with sub-60-second lead routing see measurable conversion improvements within 30 days of deployment because each enquiry is converted to a booked consultation or follow-up at dramatically higher rates than manual, human-dependent response processes.</p>
-
+        <p>Lead routing responds within 60 seconds, closing the response-latency gap. Practices operating with sub-60-second lead routing see measurable conversion improvements within 30 days of deployment.</p>
         <h2>GDPR-Compliant Infrastructure</h2>
-        <p>Patient data is hosted on Google Cloud Platform's EU-region infrastructure, independently certified to ISO 27001 and SOC 2. Data is encrypted at rest (AES-256) and in transit (TLS 1.3) by default. Every engagement includes a Data Processing Agreement defining lawful basis, retention limits, and processing scope. No patient data is shared with advertising platforms or data brokers. All encryption keys are managed within EU-region Key Management Services, and all processing logs are retained for audit purposes. For dental clinics operating across multiple European jurisdictions, Processa supports dual-compliance frameworks covering both EU GDPR and applicable national implementing legislation. Your practice receives audit-ready documentation and compliance assurance as standard.</p>
-
+        <p>Patient data is hosted on Google Cloud Platform's EU-region infrastructure, certified to ISO 27001 and SOC 2. Encrypted at rest (AES-256) and in transit (TLS 1.3).</p>
         <h2>The 14-Day Deployment Method</h2>
-        <p>Full deployment of Processa's infrastructure takes 14 days. Days 1–5 cover diagnostic audit: your practice's existing patient acquisition infrastructure is analysed, competitor AEO positioning is mapped, and revenue recovery opportunity is quantified specific to your clinic's data. Days 6–10 cover architecture build-out: schema markup is deployed, AEO content is structured, and lead routing infrastructure is integrated with your practice management system. Days 11–14 cover activation: the system goes live, your practice receives the PAC (Patient Acquisition Centre) dashboard, and the sub-60-second routing SLA is confirmed. The engagement concludes on day 14. All infrastructure belongs to your practice. No ongoing retainer is required. Visit the <a href="/method/">14-Day Method page</a> for a detailed day-by-day breakdown of the deployment process and what you can expect at each stage.</p>
-
+        <p>Full deployment takes 14 days. Days 1-5 diagnostic audit. Days 6-10 architecture build. Days 11-14 activation. All infrastructure belongs to your practice.</p>
         <nav>
           <ul>
             <li><a href="/dental-implant-patient-acquisition/">Dental Implant Patient Acquisition</a></li>

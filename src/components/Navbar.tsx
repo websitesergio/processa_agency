@@ -1,181 +1,90 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Menu, X } from 'lucide-react';
 
-const SERVICE_LINKS = [
-  { to: '/answer-engine-optimisation-dental', label: 'AEO' },
-  { to: '/dental-implant-patient-acquisition', label: 'Implants' },
-  { to: '/invisalign-lead-generation', label: 'Invisalign' },
-  { to: '/sub-60-second-lead-routing', label: 'Lead Routing' },
-  { to: '/gdpr-dental-data-compliance', label: 'GDPR' },
+const NAV_LINKS = [
   { to: '/method', label: 'Method' },
+  { to: '/dental-implant-patient-acquisition', label: 'Implant' },
+  { to: '/invisalign-lead-generation', label: 'Invisalign' },
+  { to: '/answer-engine-optimisation-dental', label: 'AEO' },
+  { to: '/gdpr-dental-data-compliance', label: 'GDPR' },
 ];
 
 export default function Navbar() {
   const location = useLocation();
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   return (
-    <>
-      <style>{`
-        @media (min-width: 768px) {
-          .nav-desktop { display: flex !important; }
-          .nav-hamburger { display: none !important; }
-          .nav-mobile-menu { display: none !important; }
-        }
-        @media (max-width: 767px) {
-          .nav-desktop { display: none !important; }
-        }
-      `}</style>
-
-      <header
-        style={{
-          position: 'sticky',
-          top: 0,
-          zIndex: 50,
-          background: 'rgba(15,23,42,0.92)',
-          backdropFilter: 'blur(20px)',
-          WebkitBackdropFilter: 'blur(20px)',
-          borderBottom: '1px solid rgba(245,242,236,0.07)',
-        }}
+    <header className="sticky top-0 z-50 bg-brand-dark/95 backdrop-blur-lg border-b border-slate-700/50">
+      <nav
+        className="max-w-7xl mx-auto px-5 h-16 flex items-center justify-between"
+        aria-label="Main navigation"
       >
-        <nav
-          style={{
-            maxWidth: '1200px',
-            margin: '0 auto',
-            padding: '0 1.25rem',
-            height: '60px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: '1rem',
-          }}
-          aria-label="Main navigation"
+        <Link
+          to="/"
+          className="text-lg font-bold tracking-tight text-brand-light hover:text-brand-accent transition-colors"
         >
-          {/* Logo */}
+          Processa
+        </Link>
+
+        {/* Desktop links */}
+        <div className="hidden md:flex items-center gap-6">
+          {NAV_LINKS.map(({ to, label }) => (
+            <Link
+              key={to}
+              to={to}
+              className={`text-xs font-medium uppercase tracking-wider transition-colors ${
+                location.pathname === to
+                  ? 'text-brand-accent'
+                  : 'text-slate-400 hover:text-brand-light'
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
+        </div>
+
+        {/* Desktop CTA */}
+        <Link to="/access" className="hidden md:inline-flex btn-primary text-xs py-2.5 px-5">
+          Book Diagnostic Audit
+        </Link>
+
+        {/* Mobile toggle */}
+        <button
+          type="button"
+          className="md:hidden p-2 text-slate-300 hover:text-white"
+          onClick={() => setOpen(v => !v)}
+          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-expanded={open}
+        >
+          {open ? <X size={20} /> : <Menu size={20} />}
+        </button>
+      </nav>
+
+      {/* Mobile menu */}
+      {open && (
+        <div className="md:hidden border-t border-slate-700/50 bg-brand-dark/98 backdrop-blur-lg px-5 py-4 space-y-1">
+          {NAV_LINKS.map(({ to, label }) => (
+            <Link
+              key={to}
+              to={to}
+              onClick={() => setOpen(false)}
+              className={`block py-3 text-sm font-medium border-b border-slate-800 ${
+                location.pathname === to ? 'text-brand-accent' : 'text-slate-300'
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
           <Link
-            to="/"
-            aria-label="Processa Advisory — AI Dental Patient Acquisition Europe"
-            style={{
-              fontFamily: "'Playfair Display',Georgia,serif",
-              fontStyle: 'italic',
-              fontWeight: 400,
-              fontSize: '1.3rem',
-              color: '#f5f2ec',
-              letterSpacing: '-0.02em',
-              textDecoration: 'none',
-              flexShrink: 0,
-            }}
+            to="/access"
+            onClick={() => setOpen(false)}
+            className="block mt-4 btn-primary text-center text-xs"
           >
-            Processa
+            Book Diagnostic Audit
           </Link>
-
-          {/* Desktop nav */}
-          <div className="nav-desktop" style={{ alignItems: 'center', gap: '1.5rem', display: 'none', flexWrap: 'wrap' }}>
-            {SERVICE_LINKS.map(({ to, label }) => (
-              <Link
-                key={to}
-                to={to}
-                style={{
-                  fontFamily: 'Inter,system-ui,sans-serif',
-                  fontSize: '11px',
-                  fontWeight: 500,
-                  letterSpacing: '0.16em',
-                  textTransform: 'uppercase',
-                  color: location.pathname === to ? '#D4A853' : 'rgba(245,242,236,0.55)',
-                  textDecoration: 'none',
-                  transition: 'color 0.15s ease',
-                  whiteSpace: 'nowrap',
-                }}
-              >
-                {label}
-              </Link>
-            ))}
-            <Link
-              to="/access"
-              style={{
-                fontFamily: 'Inter,system-ui,sans-serif',
-                fontSize: '11px',
-                fontWeight: 600,
-                letterSpacing: '0.14em',
-                textTransform: 'uppercase',
-                color: '#0f172a',
-                textDecoration: 'none',
-                background: '#D4A853',
-                padding: '9px 20px',
-                borderRadius: '9999px',
-                whiteSpace: 'nowrap',
-                flexShrink: 0,
-              }}
-            >
-              Free Audit
-            </Link>
-          </div>
-
-          {/* Mobile: CTA + hamburger */}
-          <div className="nav-hamburger" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flex: '0 0 auto' }}>
-            <Link
-              to="/access"
-              style={{
-                fontFamily: 'Inter,system-ui,sans-serif',
-                fontSize: '10px',
-                fontWeight: 600,
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-                color: '#0f172a',
-                textDecoration: 'none',
-                background: '#D4A853',
-                padding: '8px 14px',
-                borderRadius: '9999px',
-                whiteSpace: 'nowrap',
-                flexShrink: 0,
-              }}
-            >
-              Free Audit
-            </Link>
-            <button
-              type="button"
-              aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-              aria-expanded={menuOpen}
-              onClick={() => setMenuOpen(v => !v)}
-              style={{ background: 'transparent', border: 'none', cursor: 'pointer', padding: '8px', display: 'flex', flexDirection: 'column', gap: '5px', flexShrink: 0 }}
-            >
-              <span style={{ display: 'block', width: '20px', height: '1.5px', background: '#f5f2ec', borderRadius: '2px', transition: 'transform 0.2s ease, opacity 0.2s ease', transform: menuOpen ? 'translateY(6.5px) rotate(45deg)' : 'none' }} />
-              <span style={{ display: 'block', width: '20px', height: '1.5px', background: '#f5f2ec', borderRadius: '2px', transition: 'opacity 0.2s ease', opacity: menuOpen ? 0 : 1 }} />
-              <span style={{ display: 'block', width: '20px', height: '1.5px', background: '#f5f2ec', borderRadius: '2px', transition: 'transform 0.2s ease', transform: menuOpen ? 'translateY(-6.5px) rotate(-45deg)' : 'none' }} />
-            </button>
-          </div>
-        </nav>
-
-        {/* Mobile dropdown */}
-        {menuOpen && (
-          <div
-            className="nav-mobile-menu"
-            style={{ borderTop: '1px solid rgba(245,242,236,0.07)', background: 'rgba(15,23,42,0.97)', padding: '1rem 1.25rem 1.5rem', display: 'flex', flexDirection: 'column', gap: '0' }}
-          >
-            {[...SERVICE_LINKS, { to: '/access', label: 'Free AI-Visibility Audit' }].map(({ to, label }) => (
-              <Link
-                key={to}
-                to={to}
-                onClick={() => setMenuOpen(false)}
-                style={{
-                  fontFamily: 'Inter,system-ui,sans-serif',
-                  fontSize: '13px',
-                  fontWeight: 500,
-                  letterSpacing: '0.12em',
-                  textTransform: 'uppercase',
-                  color: to === '/access' ? '#D4A853' : 'rgba(245,242,236,0.65)',
-                  textDecoration: 'none',
-                  padding: '14px 0',
-                  borderBottom: '1px solid rgba(245,242,236,0.05)',
-                  display: 'block',
-                }}
-              >
-                {label}
-              </Link>
-            ))}
-          </div>
-        )}
-      </header>
-    </>
+        </div>
+      )}
+    </header>
   );
 }

@@ -4,31 +4,28 @@ export default {
   theme: {
     extend: {
       colors: {
-        warmMidnight: '#080705',
-        warmIvory: '#F5F2EC',
-        parchmentGold: '#D4A853',
-        inkBlue: '#1D4ED8',
-        ash: 'rgba(245, 242, 236, 0.55)',
-        rule: 'rgba(245, 242, 236, 0.12)',
-        trustBlue: '#1d4ed8',
-        clinicalGrey: '#f8fafc',
+        brand: {
+          dark: '#0F172A',
+          surface: '#1E293B',
+          accent: '#2DD4BF',
+          'accent-hover': '#14B8A6',
+          light: '#F8FAFC',
+        },
       },
       fontFamily: {
-        serif: ['"Playfair Display"', 'Georgia', 'serif'],
         sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        mono: ['"IBM Plex Mono"', '"Courier New"', 'monospace'],
       },
-      letterSpacing: {
-        tightest: '-0.04em',
-        tighter: '-0.03em',
-        tight: '-0.02em',
-        widest: '0.28em',
-      },
-      lineHeight: {
-        heading: '1.1',
+      fontSize: {
+        h1: ['clamp(2.5rem, 5vw, 4rem)', { lineHeight: '1.1', letterSpacing: '-0.02em', fontWeight: '700' }],
+        h2: ['2rem', { lineHeight: '1.2', letterSpacing: '-0.01em', fontWeight: '700' }],
+        body: ['1.0625rem', { lineHeight: '1.7' }],
       },
       maxWidth: {
-        prose: '65ch',
+        prose: '68ch',
+      },
+      borderRadius: {
+        card: '12px',
+        btn: '8px',
       },
     },
   },
