@@ -5,6 +5,7 @@ export default function GdprPage() {
   return (
     <SubpageLayout
       breadcrumb="GDPR Compliance"
+      breadcrumbPath="/gdpr-dental-data-compliance"
       title="GDPR-Compliant Dental Data Infrastructure"
       subtitle="Patient data hosted on EU-region infrastructure, independently certified to ISO 27001 and SOC 2. Encrypted at rest and in transit by default."
       tldr={[

@@ -5,6 +5,7 @@ export default function AeoPage() {
   return (
     <SubpageLayout
       breadcrumb="Answer Engine Optimisation"
+      breadcrumbPath="/answer-engine-optimisation-dental"
       title="Answer Engine Optimisation for Dental Practices"
       subtitle="AI engines no longer list links — they cite answers. Processa builds the semantic infrastructure that makes AI engines cite your clinic as the authority."
       tldr={[

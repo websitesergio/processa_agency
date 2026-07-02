@@ -12,7 +12,7 @@ export default function Qualification() {
     <section className="section-light py-24 md:py-32 px-5">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-xs font-medium uppercase tracking-widest text-brand-accent mb-3">
+          <p className="text-xs font-medium uppercase tracking-widest text-slate-500 mb-3">
             Fit Assessment
           </p>
           <h2 className="text-h2 text-brand-dark">

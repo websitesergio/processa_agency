@@ -3,10 +3,27 @@ import { Link } from 'react-router-dom';
 export default function Hero() {
   return (
     <section className="section-dark relative overflow-hidden">
+      {/* Subtle grid texture */}
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        aria-hidden="true"
+        style={{
+          backgroundImage: 'radial-gradient(circle, #F8FAFC 1px, transparent 1px)',
+          backgroundSize: '24px 24px',
+        }}
+      />
+      {/* Gradient accent */}
+      <div
+        className="absolute top-0 right-0 w-1/2 h-full opacity-[0.06]"
+        aria-hidden="true"
+        style={{
+          background: 'radial-gradient(ellipse at 70% 30%, #2DD4BF, transparent 60%)',
+        }}
+      />
       <div className="max-w-7xl mx-auto px-5 py-24 md:py-32 grid lg:grid-cols-2 gap-16 items-center">
         {/* Left: copy */}
         <div className="max-w-xl">
-          <p className="text-xs font-medium uppercase tracking-widest text-brand-accent mb-4 opacity-0 animate-fade-in-up">
+          <p className="text-xs font-medium uppercase tracking-widest text-slate-400 mb-4 opacity-0 animate-fade-in-up">
             AI Patient Acquisition Infrastructure
           </p>
           <h1 className="text-h1 text-brand-light mb-6 opacity-0 animate-fade-in-up animate-delay-100">

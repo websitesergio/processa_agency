@@ -5,6 +5,7 @@ export default function LeadRoutingPage() {
   return (
     <SubpageLayout
       breadcrumb="Sub-60-Second Lead Routing"
+      breadcrumbPath="/sub-60-second-lead-routing"
       title="Sub-60-Second Lead Routing for Dental Practices"
       subtitle="Close the response-latency gap that research links to lost conversions. Every enquiry acknowledged and triaged within 60 seconds, 24/7."
       tldr={[

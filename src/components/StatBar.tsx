@@ -7,17 +7,17 @@ const STATS = [
 
 export default function StatBar() {
   return (
-    <section className="section-surface py-16 md:py-20 px-5 border-y border-slate-700/30">
+    <section className="section-light py-16 md:py-20 px-5">
       <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-6">
         {STATS.map(({ value, label }) => (
           <div
             key={label}
-            className="text-center p-6 rounded-card border border-slate-700/30 bg-brand-dark/40"
+            className="text-center p-6 rounded-card border border-slate-200 bg-white"
           >
             <div className="text-2xl md:text-3xl font-bold text-brand-accent mb-2">
               {value}
             </div>
-            <p className="text-xs text-slate-400 uppercase tracking-wider font-medium leading-relaxed">
+            <p className="text-xs text-slate-500 uppercase tracking-wider font-medium leading-relaxed">
               {label}
             </p>
           </div>

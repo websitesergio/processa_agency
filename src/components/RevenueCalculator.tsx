@@ -1,4 +1,4 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 
 const RESPONSE_OPTIONS = [
   { label: 'Under 5 min', multiplier: 1.0 },
@@ -11,25 +11,54 @@ const RESPONSE_OPTIONS = [
 const BASE_CONVERSION = 0.20;
 const CAPTURE_RATE = 0.60;
 
+function useAnimatedValue(target: number, duration = 600) {
+  const [display, setDisplay] = useState(target);
+  const rafRef = useRef<number>(0);
+  const startRef = useRef({ value: target, time: 0 });
+
+  useEffect(() => {
+    const start = display;
+    const startTime = performance.now();
+    startRef.current = { value: start, time: startTime };
+
+    const animate = (now: number) => {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setDisplay(Math.round(start + (target - start) * eased));
+      if (progress < 1) {
+        rafRef.current = requestAnimationFrame(animate);
+      }
+    };
+
+    rafRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(rafRef.current);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [target, duration]);
+
+  return display;
+}
+
 export default function RevenueCalculator() {
   const [enquiries, setEnquiries] = useState(40);
   const [treatmentValue, setTreatmentValue] = useState(3500);
   const [responseIdx, setResponseIdx] = useState(3);
 
   const calcLeakage = useCallback(() => {
-    const optimalRevenue = enquiries * 12 * BASE_CONVERSION * CAPTURE_RATE * treatmentValue;
     const currentMultiplier = RESPONSE_OPTIONS[responseIdx].multiplier;
-    const currentRevenue = enquiries * 12 * BASE_CONVERSION * CAPTURE_RATE * treatmentValue * currentMultiplier;
-    return Math.round(optimalRevenue - currentRevenue);
+    const maxRevenue = enquiries * 12 * BASE_CONVERSION * CAPTURE_RATE * treatmentValue;
+    const currentRevenue = maxRevenue * currentMultiplier;
+    return Math.round(maxRevenue - currentRevenue);
   }, [enquiries, treatmentValue, responseIdx]);
 
   const leakage = calcLeakage();
+  const animatedLeakage = useAnimatedValue(leakage);
 
   return (
-    <section id="calculator" className="section-dark py-24 md:py-32 px-5">
+    <section id="calculator" className="section-surface py-24 md:py-32 px-5 border-y border-slate-700/30">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-xs font-medium uppercase tracking-widest text-brand-accent mb-3">
+          <p className="text-xs font-medium uppercase tracking-widest text-slate-400 mb-3">
             Revenue Diagnostic
           </p>
           <h2 className="text-h2 text-brand-light mb-4">
@@ -40,7 +69,7 @@ export default function RevenueCalculator() {
           </p>
         </div>
 
-        <div className="rounded-card border border-slate-700/50 bg-brand-surface p-8 md:p-10 space-y-8">
+        <div className="rounded-card border border-slate-700/50 bg-brand-dark p-8 md:p-10 space-y-8">
           {/* Monthly Enquiries */}
           <div>
             <div className="flex justify-between items-baseline mb-3">
@@ -95,27 +124,24 @@ export default function RevenueCalculator() {
             </div>
           </div>
 
-          {/* Response Time */}
+          {/* Response Time - Dropdown */}
           <div>
-            <label className="text-sm font-medium text-slate-300 block mb-3">
+            <label htmlFor="response-time" className="text-sm font-medium text-slate-300 block mb-3">
               Current Average Response Time
             </label>
-            <div className="grid grid-cols-2 sm:grid-cols-5 gap-2">
+            <select
+              id="response-time"
+              value={responseIdx}
+              onChange={e => setResponseIdx(Number(e.target.value))}
+              className="w-full bg-brand-surface border border-slate-700 text-brand-light rounded-btn px-4 py-3 text-sm font-medium focus:outline-none focus:ring-2 focus:ring-brand-accent focus:border-brand-accent appearance-none cursor-pointer"
+              style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2394A3B8' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center' }}
+            >
               {RESPONSE_OPTIONS.map((opt, idx) => (
-                <button
-                  key={opt.label}
-                  type="button"
-                  onClick={() => setResponseIdx(idx)}
-                  className={`py-2.5 px-3 rounded-btn text-xs font-medium transition-all border ${
-                    responseIdx === idx
-                      ? 'bg-brand-accent text-brand-dark border-brand-accent'
-                      : 'bg-brand-dark border-slate-700 text-slate-400 hover:border-slate-500'
-                  }`}
-                >
+                <option key={opt.label} value={idx}>
                   {opt.label}
-                </button>
+                </option>
               ))}
-            </div>
+            </select>
           </div>
 
           {/* Result */}
@@ -127,8 +153,8 @@ export default function RevenueCalculator() {
             <p className="text-xs uppercase tracking-widest text-slate-400 mb-2">
               Estimated Annual Recoverable Revenue
             </p>
-            <p className="text-4xl md:text-5xl font-bold text-brand-accent tracking-tight">
-              £{leakage.toLocaleString()}
+            <p className="text-4xl md:text-5xl font-bold text-brand-accent tracking-tight tabular-nums">
+              £{animatedLeakage.toLocaleString()}
             </p>
             <p className="text-sm text-slate-500 mt-2 mb-8">
               Based on {BASE_CONVERSION * 100}% base conversion, {CAPTURE_RATE * 100}% capture rate

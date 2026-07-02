@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const LAST_UPDATED = '20 April 2026';
 
 const SECTIONS = [
@@ -162,17 +164,16 @@ export default function PrivacyPage() {
         </div>
       </section>
 
-      {/* Footer strip */}
-      <section
-        style={{
-          borderTop: '1px solid rgba(15,23,42,0.07)',
-          padding: '2rem',
-          textAlign: 'center',
-        }}
-      >
-        <p style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '10px', fontWeight: 300, letterSpacing: '0.1em', color: 'rgba(15,23,42,0.3)' }}>
-          &copy; 2026 Processa Advisory — European Operations. EU GDPR Compliant.
-        </p>
+      {/* CTA band */}
+      <section className="bg-brand-surface py-16 px-5">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-xl font-bold text-brand-light mb-6">
+            Ready to discuss your patient acquisition infrastructure?
+          </h2>
+          <Link to="/access" className="btn-primary">
+            Book Your Diagnostic Audit
+          </Link>
+        </div>
       </section>
 
     </main>

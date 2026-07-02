@@ -38,7 +38,7 @@ const PHASES = [
 
 export default function MethodPage() {
   return (
-    <article>
+    <main>
       {/* Hero */}
       <section className="section-dark py-20 md:py-28 px-5">
         <div className="max-w-4xl mx-auto">
@@ -141,6 +141,6 @@ export default function MethodPage() {
           }),
         }}
       />
-    </article>
+    </main>
   );
 }

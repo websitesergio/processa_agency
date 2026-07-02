@@ -5,6 +5,7 @@ export default function InvisalignPage() {
   return (
     <SubpageLayout
       breadcrumb="Invisalign Lead Generation"
+      breadcrumbPath="/invisalign-lead-generation"
       title="Invisalign Lead Generation for European Clinics"
       subtitle="Position your Invisalign expertise as the cited authority in AI search. Reduce acquisition cost while increasing consultation volume."
       tldr={[

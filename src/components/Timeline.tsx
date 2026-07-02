@@ -29,10 +29,10 @@ const PHASES = [
 
 export default function Timeline() {
   return (
-    <section className="section-surface py-24 md:py-32 px-5">
+    <section className="section-dark py-24 md:py-32 px-5">
       <div className="max-w-5xl mx-auto">
         <div className="text-center mb-16">
-          <p className="text-xs font-medium uppercase tracking-widest text-brand-accent mb-3">
+          <p className="text-xs font-medium uppercase tracking-widest text-slate-400 mb-3">
             Deployment
           </p>
           <h2 className="text-h2 text-brand-light">

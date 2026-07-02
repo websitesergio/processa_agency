@@ -5,6 +5,7 @@ export default function DentalImplantPage() {
   return (
     <SubpageLayout
       breadcrumb="Dental Implant Patient Acquisition"
+      breadcrumbPath="/dental-implant-patient-acquisition"
       title="Dental Implant Patient Acquisition for European Clinics"
       subtitle="High-ticket implant cases demand instant response and AI-first discovery. Processa routes qualified implant enquiries within 60 seconds."
       tldr={[

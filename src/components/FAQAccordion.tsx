@@ -35,7 +35,7 @@ export default function FAQAccordion() {
     <section className="section-dark py-24 md:py-32 px-5">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-xs font-medium uppercase tracking-widest text-brand-accent mb-3">
+          <p className="text-xs font-medium uppercase tracking-widest text-slate-400 mb-3">
             FAQ
           </p>
           <h2 className="text-h2 text-brand-light">

@@ -8,6 +8,7 @@ interface TocItem {
 
 interface SubpageLayoutProps {
   breadcrumb: string;
+  breadcrumbPath: string;
   title: string;
   subtitle: string;
   tldr: string[];
@@ -16,9 +17,18 @@ interface SubpageLayoutProps {
   schema?: object;
 }
 
-export default function SubpageLayout({ breadcrumb, title, subtitle, tldr, toc, children, schema }: SubpageLayoutProps) {
+export default function SubpageLayout({ breadcrumb, breadcrumbPath, title, subtitle, tldr, toc, children, schema }: SubpageLayoutProps) {
+  const breadcrumbJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://sergiogroup.org/' },
+      { '@type': 'ListItem', position: 2, name: breadcrumb, item: `https://sergiogroup.org${breadcrumbPath}` },
+    ],
+  };
+
   return (
-    <article>
+    <main>
       {/* Hero */}
       <section className="section-dark py-20 md:py-28 px-5">
         <div className="max-w-4xl mx-auto">
@@ -35,7 +45,7 @@ export default function SubpageLayout({ breadcrumb, title, subtitle, tldr, toc, 
 
           {/* TL;DR card */}
           <div className="mt-8 rounded-card border border-slate-700/50 bg-brand-surface p-6">
-            <p className="text-xs font-medium uppercase tracking-widest text-brand-accent mb-3">TL;DR</p>
+            <p className="text-xs font-medium uppercase tracking-widest text-slate-400 mb-3">TL;DR</p>
             <ul className="space-y-2">
               {tldr.map((item, idx) => (
                 <li key={idx} className="flex gap-2.5 text-sm text-slate-300 leading-relaxed">
@@ -78,7 +88,7 @@ export default function SubpageLayout({ breadcrumb, title, subtitle, tldr, toc, 
       </section>
 
       {/* CTA Band */}
-      <section className="bg-brand-dark border-t border-slate-700/30 py-16 px-5">
+      <section className="bg-brand-surface border-t border-slate-700/30 py-16 px-5">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-xl font-bold text-brand-light mb-6">
             Ready to stop losing patients to response latency?
@@ -89,12 +99,17 @@ export default function SubpageLayout({ breadcrumb, title, subtitle, tldr, toc, 
         </div>
       </section>
 
+      {/* JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {schema && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
       )}
-    </article>
+    </main>
   );
 }
