@@ -1,6 +1,6 @@
 import { useId, useState, useCallback, useEffect } from 'react';
 import { X } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { supabase } from '../lib/supabase';
 import { useInView } from '../lib/useInView';
 import { useAuditor, formatGBP } from '../lib/AuditorContext';
@@ -163,6 +163,9 @@ export default function AccessPage() {
   const [touched, setTouched] = useState<TouchedFields>(INITIAL_TOUCHED);
   const [consentChecked, setConsentChecked] = useState(false);
   const [toast, setToast] = useState<string | null>(null);
+  const [honeypot, setHoneypot] = useState('');
+  const [searchParams] = useSearchParams();
+  const sourcePage = searchParams.get('from') || '/';
   const uid = useId();
   const { state: auditState } = useAuditor();
   const [headerRef, headerVisible] = useInView<HTMLDivElement>({ threshold: 0.1 });
@@ -214,6 +217,11 @@ export default function AccessPage() {
       return;
     }
 
+    if (honeypot) {
+      setStatus('success');
+      return;
+    }
+
     if (status === 'submitting') return;
     setStatus('submitting');
 
@@ -231,6 +239,7 @@ export default function AccessPage() {
       problem_statement: enrichedProblem.trim(),
       budget_range: null,
       status: 'new',
+      source_page: sourcePage,
     };
 
     try {
@@ -403,6 +412,20 @@ export default function AccessPage() {
                     </p>
 
                     <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-8">
+
+                      {/* Honeypot - hidden from humans */}
+                      <div aria-hidden="true" style={{ position: 'absolute', left: '-9999px', opacity: 0, height: 0, overflow: 'hidden' }}>
+                        <label htmlFor={`${uid}-company-url`}>Company URL</label>
+                        <input
+                          id={`${uid}-company-url`}
+                          type="text"
+                          name="company_url"
+                          tabIndex={-1}
+                          autoComplete="off"
+                          value={honeypot}
+                          onChange={e => setHoneypot(e.target.value)}
+                        />
+                      </div>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <FieldGroup id={`${uid}-name`} label="Full Name" error={errors.full_name} touched={touched.full_name}>

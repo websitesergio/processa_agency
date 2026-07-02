@@ -159,7 +159,7 @@ export default function RevenueCalculator() {
             <p className="text-sm text-slate-500 mt-2 mb-8">
               Based on {BASE_CONVERSION * 100}% base conversion, {CAPTURE_RATE * 100}% capture rate
             </p>
-            <a href="/access" className="btn-primary">
+            <a href="/access?from=calculator" className="btn-primary">
               Get Your Exact Figure — Book the Diagnostic Audit
             </a>
           </div>

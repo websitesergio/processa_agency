@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ReactNode } from 'react';
 
 interface TocItem {
@@ -18,6 +18,7 @@ interface SubpageLayoutProps {
 }
 
 export default function SubpageLayout({ breadcrumb, breadcrumbPath, title, subtitle, tldr, toc, children, schema }: SubpageLayoutProps) {
+  const { pathname } = useLocation();
   const breadcrumbJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -93,7 +94,7 @@ export default function SubpageLayout({ breadcrumb, breadcrumbPath, title, subti
           <h2 className="text-xl font-bold text-brand-light mb-6">
             Ready to stop losing patients to response latency?
           </h2>
-          <Link to="/access" className="btn-primary">
+          <Link to={`/access?from=${encodeURIComponent(pathname)}`} className="btn-primary">
             Book Your Diagnostic Audit
           </Link>
         </div>
