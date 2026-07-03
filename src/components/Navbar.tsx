@@ -15,28 +15,27 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-brand-dark/95 backdrop-blur-lg border-b border-slate-700/50">
+    <header className="sticky top-0 z-50 bg-ink/95 backdrop-blur-lg border-b border-ivory/8">
       <nav
-        className="max-w-7xl mx-auto px-5 h-16 flex items-center justify-between"
+        className="max-w-site mx-auto px-5 h-16 flex items-center justify-between"
         aria-label="Main navigation"
       >
         <Link
           to="/"
-          className="text-lg font-bold tracking-tight text-brand-light hover:text-brand-accent transition-colors"
+          className="text-lg font-bold tracking-tight text-ivory hover:text-gold transition-colors"
         >
           Processa
         </Link>
 
-        {/* Desktop links */}
         <div className="hidden md:flex items-center gap-6">
           {NAV_LINKS.map(({ to, label }) => (
             <Link
               key={to}
               to={to}
-              className={`text-xs font-medium uppercase tracking-wider transition-colors ${
+              className={`text-label font-medium uppercase tracking-widest transition-colors ${
                 location.pathname === to
-                  ? 'text-brand-accent'
-                  : 'text-slate-400 hover:text-brand-light'
+                  ? 'text-gold'
+                  : 'text-ivory/50 hover:text-ivory'
               }`}
             >
               {label}
@@ -44,15 +43,13 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Desktop CTA */}
         <Link to="/access" className="hidden md:inline-flex btn-primary text-xs py-2.5 px-5">
           Book Diagnostic Audit
         </Link>
 
-        {/* Mobile toggle */}
         <button
           type="button"
-          className="md:hidden p-2 text-slate-300 hover:text-white"
+          className="md:hidden p-2 text-ivory/60 hover:text-ivory"
           onClick={() => setOpen(v => !v)}
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
@@ -61,16 +58,15 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden border-t border-slate-700/50 bg-brand-dark/98 backdrop-blur-lg px-5 py-4 space-y-1">
+        <div className="md:hidden border-t border-ivory/8 bg-ink px-5 py-4 space-y-1">
           {NAV_LINKS.map(({ to, label }) => (
             <Link
               key={to}
               to={to}
               onClick={() => setOpen(false)}
-              className={`block py-3 text-sm font-medium border-b border-slate-800 ${
-                location.pathname === to ? 'text-brand-accent' : 'text-slate-300'
+              className={`block py-3 text-sm font-medium border-b border-ivory/8 ${
+                location.pathname === to ? 'text-gold' : 'text-ivory/70'
               }`}
             >
               {label}

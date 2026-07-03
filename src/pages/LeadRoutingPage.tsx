@@ -29,24 +29,24 @@ export default function LeadRoutingPage() {
       }}
     >
       <section id="speed-matters" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">Why Speed Matters</h2>
-        <div className="rounded-card border border-slate-200 bg-slate-50 p-5 mb-6 flex items-center gap-4">
-          <span className="text-3xl font-bold text-brand-accent">~4×</span>
-          <span className="text-sm text-slate-600">More likely to convert when contacted within 5 minutes vs 30+ minutes</span>
+        <h2 className="text-h2 text-ink mb-6">Why Speed Matters</h2>
+        <div className="rounded-card border border-ink/8 bg-ivory-2 p-5 mb-6 flex items-center gap-4">
+          <span className="text-3xl font-bold text-gold">~4×</span>
+          <span className="text-sm text-ink/65">More likely to convert when contacted within 5 minutes vs 30+ minutes</span>
         </div>
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             Contacting a lead within 5 minutes vs 30+ minutes increases qualification odds approximately 4× (Lead Response Management Study). The window of decision intent is short: a patient who submits an enquiry for dental implants or Invisalign is at peak engagement in that moment. Delay erodes both their attention and their trust in your responsiveness.
           </p>
           <p>
-            For a practice receiving 40 monthly high-ticket enquiries at £3,500 LTV, a 12-hour average response time represents £20,000-£40,000 in annual recoverable revenue lost to competitors who respond faster. This leakage is invisible on standard financial reports because it comprises patients who never booked, not patients who cancelled.
+            For a practice receiving 40 monthly high-ticket enquiries at £3,500 LTV, a 12-hour average response time represents £20,000–£40,000 in annual recoverable revenue lost to competitors who respond faster. This leakage is invisible on standard financial reports because it comprises patients who never booked, not patients who cancelled.
           </p>
         </div>
       </section>
 
       <section id="how-it-works" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">How It Works</h2>
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <h2 className="text-h2 text-ink mb-6">How It Works</h2>
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             When a patient submits an enquiry through your website, Google Ads landing page, or social media lead form, Processa's routing system immediately identifies the treatment type, selects the appropriate response template, and dispatches a branded, personalised message via SMS, WhatsApp, or email.
           </p>
@@ -57,8 +57,8 @@ export default function LeadRoutingPage() {
       </section>
 
       <section id="always-on" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">24/7 Operation</h2>
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <h2 className="text-h2 text-ink mb-6">24/7 Operation</h2>
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             This automation operates 24 hours a day, seven days a week, with no dependency on practice opening hours. A patient submitting an enquiry at 11pm receives the same instant, professional acknowledgment as one submitting at 9am on a Tuesday.
           </p>
@@ -69,8 +69,8 @@ export default function LeadRoutingPage() {
       </section>
 
       <section id="results" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">Measurable Results</h2>
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <h2 className="text-h2 text-ink mb-6">Measurable Results</h2>
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             Practices operating with sub-60-second lead routing see measurable conversion improvements within 30 days of deployment. Each enquiry is converted to a booked consultation at dramatically higher rates than manual, human-dependent response processes.
           </p>
@@ -80,12 +80,12 @@ export default function LeadRoutingPage() {
         </div>
       </section>
 
-      <div className="border-t border-slate-200 pt-8">
-        <p className="text-xs font-medium uppercase tracking-wider text-slate-400 mb-4">Related</p>
+      <div className="border-t border-ink/8 pt-8">
+        <p className="text-label font-medium uppercase tracking-widest text-ink/40 mb-4">Related</p>
         <div className="flex flex-wrap gap-3">
-          <Link to="/dental-implant-patient-acquisition" className="text-sm text-brand-dark hover:text-brand-accent transition-colors">Implant Acquisition &rarr;</Link>
-          <Link to="/invisalign-lead-generation" className="text-sm text-brand-dark hover:text-brand-accent transition-colors">Invisalign Leads &rarr;</Link>
-          <Link to="/gdpr-dental-data-compliance" className="text-sm text-brand-dark hover:text-brand-accent transition-colors">GDPR Compliance &rarr;</Link>
+          <Link to="/dental-implant-patient-acquisition" className="text-sm text-ink/60 hover:text-gold transition-colors">Implant Acquisition &rarr;</Link>
+          <Link to="/invisalign-lead-generation" className="text-sm text-ink/60 hover:text-gold transition-colors">Invisalign Leads &rarr;</Link>
+          <Link to="/gdpr-dental-data-compliance" className="text-sm text-ink/60 hover:text-gold transition-colors">GDPR Compliance &rarr;</Link>
         </div>
       </div>
     </SubpageLayout>

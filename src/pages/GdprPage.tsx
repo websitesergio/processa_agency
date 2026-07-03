@@ -29,8 +29,8 @@ export default function GdprPage() {
       }}
     >
       <section id="infrastructure" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">Infrastructure Security</h2>
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <h2 className="text-h2 text-ink mb-6">Infrastructure Security</h2>
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             Patient data is hosted on Google Cloud Platform's EU-region infrastructure, independently certified to ISO 27001 and SOC 2. All data processing occurs within EU boundaries, with no transfer to non-EU jurisdictions.
           </p>
@@ -41,18 +41,18 @@ export default function GdprPage() {
       </section>
 
       <section id="encryption" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">Encryption Standards</h2>
+        <h2 className="text-h2 text-ink mb-6">Encryption Standards</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
-          <div className="rounded-card border border-slate-200 bg-slate-50 p-4">
-            <span className="text-sm font-bold text-brand-dark">At Rest</span>
-            <p className="text-sm text-slate-600 mt-1">AES-256 encryption</p>
+          <div className="rounded-card border border-ink/8 bg-ivory-2 p-4">
+            <span className="text-sm font-semibold text-ink">At Rest</span>
+            <p className="text-sm text-ink/65 mt-1">AES-256 encryption</p>
           </div>
-          <div className="rounded-card border border-slate-200 bg-slate-50 p-4">
-            <span className="text-sm font-bold text-brand-dark">In Transit</span>
-            <p className="text-sm text-slate-600 mt-1">TLS 1.3 by default</p>
+          <div className="rounded-card border border-ink/8 bg-ivory-2 p-4">
+            <span className="text-sm font-semibold text-ink">In Transit</span>
+            <p className="text-sm text-ink/65 mt-1">TLS 1.3 by default</p>
           </div>
         </div>
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             Data is encrypted at rest (AES-256) and in transit (TLS 1.3) by default. Encryption is not optional or add-on — it's the baseline configuration for all patient data processed through Processa's infrastructure.
           </p>
@@ -60,8 +60,8 @@ export default function GdprPage() {
       </section>
 
       <section id="compliance" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">Compliance Framework</h2>
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <h2 className="text-h2 text-ink mb-6">Compliance Framework</h2>
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             For dental clinics operating across multiple European jurisdictions, Processa supports dual-compliance frameworks covering both EU GDPR and applicable national implementing legislation.
           </p>
@@ -72,8 +72,8 @@ export default function GdprPage() {
       </section>
 
       <section id="data-policy" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">Data Processing Policy</h2>
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <h2 className="text-h2 text-ink mb-6">Data Processing Policy</h2>
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             Every engagement includes a Data Processing Agreement defining lawful basis, retention limits, and processing scope. The DPA specifies exactly what data is collected, how it's processed, how long it's retained, and the mechanisms for patient access requests and data deletion.
           </p>
@@ -83,12 +83,12 @@ export default function GdprPage() {
         </div>
       </section>
 
-      <div className="border-t border-slate-200 pt-8">
-        <p className="text-xs font-medium uppercase tracking-wider text-slate-400 mb-4">Related</p>
+      <div className="border-t border-ink/8 pt-8">
+        <p className="text-label font-medium uppercase tracking-widest text-ink/40 mb-4">Related</p>
         <div className="flex flex-wrap gap-3">
-          <Link to="/sub-60-second-lead-routing" className="text-sm text-brand-dark hover:text-brand-accent transition-colors">Lead Routing &rarr;</Link>
-          <Link to="/method" className="text-sm text-brand-dark hover:text-brand-accent transition-colors">14-Day Method &rarr;</Link>
-          <Link to="/privacy" className="text-sm text-brand-dark hover:text-brand-accent transition-colors">Privacy Policy &rarr;</Link>
+          <Link to="/sub-60-second-lead-routing" className="text-sm text-ink/60 hover:text-gold transition-colors">Lead Routing &rarr;</Link>
+          <Link to="/method" className="text-sm text-ink/60 hover:text-gold transition-colors">14-Day Method &rarr;</Link>
+          <Link to="/privacy" className="text-sm text-ink/60 hover:text-gold transition-colors">Privacy Policy &rarr;</Link>
         </div>
       </div>
     </SubpageLayout>

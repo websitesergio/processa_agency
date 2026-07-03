@@ -80,7 +80,7 @@ export default function App() {
   }, [location.pathname]);
 
   return (
-    <div className="min-h-screen bg-brand-dark">
+    <div className="min-h-screen bg-ink">
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />

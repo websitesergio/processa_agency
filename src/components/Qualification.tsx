@@ -9,16 +9,16 @@ const QUALIFIERS = [
 
 export default function Qualification() {
   return (
-    <section className="section-light py-24 md:py-32 px-5">
+    <section className="section-ink py-24 md:py-32 px-5">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <p className="text-xs font-medium uppercase tracking-widest text-slate-500 mb-3">
+          <p className="text-label font-medium uppercase tracking-widest text-ivory/35 mb-3">
             Fit Assessment
           </p>
-          <h2 className="text-h2 text-brand-dark">
+          <h2 className="text-h2 text-ivory">
             Who This Is For
           </h2>
-          <p className="text-body text-slate-600 mt-4 max-w-prose mx-auto">
+          <p className="text-body text-ivory/60 mt-4 max-w-prose mx-auto">
             Processa works with a maximum of two new practices per month. This engagement is built for:
           </p>
         </div>
@@ -27,10 +27,10 @@ export default function Qualification() {
           {QUALIFIERS.map(q => (
             <div
               key={q}
-              className="flex gap-4 items-start p-5 rounded-card border border-slate-200 bg-white"
+              className="flex gap-4 items-start p-5 rounded-card border border-ivory/8 bg-ink-2"
             >
-              <CheckCircle size={20} className="text-brand-accent flex-shrink-0 mt-0.5" />
-              <p className="text-sm text-slate-700 leading-relaxed">{q}</p>
+              <CheckCircle size={20} className="text-gold flex-shrink-0 mt-0.5" />
+              <p className="text-sm text-ivory/70 leading-relaxed">{q}</p>
             </div>
           ))}
         </div>

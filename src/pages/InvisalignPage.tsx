@@ -29,8 +29,8 @@ export default function InvisalignPage() {
       }}
     >
       <section id="ai-discovery" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">AI-First Patient Discovery</h2>
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <h2 className="text-h2 text-ink mb-6">AI-First Patient Discovery</h2>
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             Patients considering Invisalign are in research mode. They ask AI engines questions like "is Invisalign faster than braces," "Invisalign cost UK," and "can I get Invisalign if I have crowns." These are educational queries from patients actively evaluating treatment options.
           </p>
@@ -41,8 +41,8 @@ export default function InvisalignPage() {
       </section>
 
       <section id="positioning" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">AEO for Invisalign Expertise</h2>
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <h2 className="text-h2 text-ink mb-6">AEO for Invisalign Expertise</h2>
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             AEO positioning targets queries that represent patients evaluating whether Invisalign is right for them. Processa builds the semantic infrastructure — structured JSON-LD schema, verified entity signals, and authoritative content — that AI engines use to identify your clinic as the expert in your region.
           </p>
@@ -53,8 +53,8 @@ export default function InvisalignPage() {
       </section>
 
       <section id="conversion" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">From Citation to Consultation</h2>
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <h2 className="text-h2 text-ink mb-6">From Citation to Consultation</h2>
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             When a patient acts on an AI citation and submits an enquiry, Processa's routing system responds within 60 seconds with a branded, personalised message. The patient perceives instant, professional engagement regardless of the time of day.
           </p>
@@ -65,12 +65,12 @@ export default function InvisalignPage() {
       </section>
 
       <section id="economics" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">The Economics of AI Citation</h2>
-        <div className="rounded-card border border-slate-200 bg-slate-50 p-5 mb-6 flex items-center gap-4">
-          <span className="text-3xl font-bold text-brand-accent">50-100</span>
-          <span className="text-sm text-slate-600">Qualified monthly enquiries from a single consistent AI citation at zero PPC spend</span>
+        <h2 className="text-h2 text-ink mb-6">The Economics of AI Citation</h2>
+        <div className="rounded-card border border-ink/8 bg-ivory-2 p-5 mb-6 flex items-center gap-4">
+          <span className="text-3xl font-bold text-gold">50-100</span>
+          <span className="text-sm text-ink/65">Qualified monthly enquiries from a single consistent AI citation at zero PPC spend</span>
         </div>
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             A single AI citation for a key Invisalign query can generate 50-100 qualified enquiries per month once citation consistency is established. These enquiries cost nothing, are pre-qualified, and convert at higher rates than cold paid traffic because the AI citation carries implicit endorsement.
           </p>
@@ -80,12 +80,12 @@ export default function InvisalignPage() {
         </div>
       </section>
 
-      <div className="border-t border-slate-200 pt-8">
-        <p className="text-xs font-medium uppercase tracking-wider text-slate-400 mb-4">Related</p>
+      <div className="border-t border-ink/8 pt-8">
+        <p className="text-label font-medium uppercase tracking-widest text-ink/40 mb-4">Related</p>
         <div className="flex flex-wrap gap-3">
-          <Link to="/dental-implant-patient-acquisition" className="text-sm text-brand-dark hover:text-brand-accent transition-colors">Implant Acquisition &rarr;</Link>
-          <Link to="/answer-engine-optimisation-dental" className="text-sm text-brand-dark hover:text-brand-accent transition-colors">AEO &rarr;</Link>
-          <Link to="/method" className="text-sm text-brand-dark hover:text-brand-accent transition-colors">14-Day Method &rarr;</Link>
+          <Link to="/dental-implant-patient-acquisition" className="text-sm text-ink/60 hover:text-gold transition-colors">Implant Acquisition &rarr;</Link>
+          <Link to="/answer-engine-optimisation-dental" className="text-sm text-ink/60 hover:text-gold transition-colors">AEO &rarr;</Link>
+          <Link to="/method" className="text-sm text-ink/60 hover:text-gold transition-colors">14-Day Method &rarr;</Link>
         </div>
       </div>
     </SubpageLayout>

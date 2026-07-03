@@ -40,33 +40,34 @@ export default function MethodPage() {
   return (
     <main>
       {/* Hero */}
-      <section className="section-dark py-20 md:py-28 px-5">
+      <section className="section-ink py-20 md:py-28 px-5">
         <div className="max-w-4xl mx-auto">
           <nav aria-label="Breadcrumb" className="mb-6">
-            <ol className="flex items-center gap-2 text-xs text-slate-500">
-              <li><Link to="/" className="hover:text-brand-accent transition-colors">Home</Link></li>
+            <ol className="flex items-center gap-2 text-xs text-ivory/40">
+              <li><Link to="/" className="hover:text-gold transition-colors">Home</Link></li>
               <li>/</li>
-              <li className="text-slate-300">Method</li>
+              <li className="text-ivory/60">Method</li>
             </ol>
           </nav>
 
-          <h1 className="text-h1 text-brand-light mb-4">
+          <h1 className="text-h1 text-ivory mb-4">
             The 14-Day Deployment Method
           </h1>
-          <p className="text-lg text-slate-400 max-w-2xl leading-relaxed">
+          <p className="text-body text-ivory/60 max-w-2xl leading-relaxed">
             No discovery calls that go nowhere. No proposal decks. A fixed 14-day engagement with a confirmed deliverable every single day.
           </p>
 
           {/* TL;DR */}
-          <div className="mt-8 rounded-card border border-slate-700/50 bg-brand-surface p-6">
-            <p className="text-xs font-medium uppercase tracking-widest text-brand-accent mb-3">TL;DR</p>
+          <div className="mt-8 rounded-card border border-ivory/8 bg-ink-2 p-6">
+            <p className="text-label font-medium uppercase tracking-widest text-gold mb-3">TL;DR</p>
             <ul className="space-y-2">
-              {['Days 1-5: Full diagnostic audit quantifying your exact revenue leakage',
-                'Days 6-10: AEO schema, content architecture, and lead routing deployed',
-                'Days 11-14: System live, dashboard handover, no ongoing retainer required',
+              {[
+                'Days 1–5: Full diagnostic audit quantifying your exact revenue leakage',
+                'Days 6–10: AEO schema, content architecture, and lead routing deployed',
+                'Days 11–14: System live, dashboard handover, no ongoing retainer required',
               ].map((item, idx) => (
-                <li key={idx} className="flex gap-2.5 text-sm text-slate-300 leading-relaxed">
-                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-brand-accent flex-shrink-0" />
+                <li key={idx} className="flex gap-2.5 text-sm text-ivory/70 leading-relaxed">
+                  <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-gold flex-shrink-0" />
                   {item}
                 </li>
               ))}
@@ -76,34 +77,31 @@ export default function MethodPage() {
       </section>
 
       {/* Timeline */}
-      <section className="section-light py-16 md:py-24 px-5">
+      <section className="section-ivory py-16 md:py-24 px-5">
         <div className="max-w-4xl mx-auto">
-          {/* Vertical timeline */}
-          <div className="relative pl-8 md:pl-12 border-l-2 border-slate-200 space-y-12">
+          <div className="relative pl-8 md:pl-12 border-l-2 border-ink/12 space-y-12">
             {PHASES.map((phase) => (
               <div key={phase.label}>
-                {/* Phase header */}
                 <div className="flex items-baseline gap-4 mb-6 -ml-8 md:-ml-12">
-                  <div className="w-6 h-6 rounded-full bg-brand-dark border-2 border-brand-accent flex items-center justify-center flex-shrink-0">
-                    <div className="w-2 h-2 rounded-full bg-brand-accent" />
+                  <div className="w-6 h-6 rounded-full bg-ivory border-2 border-gold flex items-center justify-center flex-shrink-0">
+                    <div className="w-2 h-2 rounded-full bg-gold" />
                   </div>
-                  <span className="text-xs font-medium uppercase tracking-widest text-brand-accent">
+                  <span className="text-label font-medium uppercase tracking-widest text-gold">
                     {phase.label}
                   </span>
-                  <h2 className="text-xl font-bold text-brand-dark">{phase.title}</h2>
+                  <h3 className="text-h3 text-ink">{phase.title}</h3>
                 </div>
 
-                {/* Day items */}
                 <div className="space-y-3">
                   {phase.items.map((item) => (
                     <div
                       key={item.day}
-                      className="flex gap-4 p-4 rounded-card border border-slate-100 bg-white hover:border-slate-200 transition-colors"
+                      className="flex gap-4 p-4 rounded-card border border-ink/8 bg-ivory-2 hover:border-ink/16 transition-colors"
                     >
-                      <span className="text-xs font-bold text-brand-accent uppercase w-8 flex-shrink-0 pt-0.5">
+                      <span className="text-label font-bold text-gold uppercase w-8 flex-shrink-0 pt-0.5">
                         {item.day}
                       </span>
-                      <p className="text-sm text-slate-600 leading-relaxed">{item.action}</p>
+                      <p className="text-sm text-ink/65 leading-relaxed">{item.action}</p>
                     </div>
                   ))}
                 </div>
@@ -112,14 +110,14 @@ export default function MethodPage() {
           </div>
 
           {/* Closing */}
-          <div className="mt-16 p-8 rounded-card border border-slate-200 bg-white">
-            <h2 className="text-xl font-bold text-brand-dark mb-4">
+          <div className="mt-16 p-8 rounded-card border border-ink/8 bg-ivory-2">
+            <h3 className="text-h3 text-ink mb-4">
               A Fixed Engagement, Not a Retainer
-            </h2>
-            <p className="text-sm text-slate-600 leading-relaxed mb-3">
+            </h3>
+            <p className="text-sm text-ink/65 leading-relaxed mb-3">
               The engagement ends on Day 14. Everything built belongs to your practice — schema infrastructure, AEO content, lead routing, and attribution dashboard. No lock-in, no monthly retainer dependency.
             </p>
-            <p className="text-sm text-slate-600 leading-relaxed">
+            <p className="text-sm text-ink/65 leading-relaxed">
               We open two new mandates per month. Selection is based on practice profile, treatment mix, and readiness to act. Implant and Invisalign practices only. Minimum five years in operation. European market.
             </p>
           </div>

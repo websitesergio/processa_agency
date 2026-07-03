@@ -29,8 +29,8 @@ export default function AeoPage() {
       }}
     >
       <section id="what-is-aeo" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">What Is Answer Engine Optimisation?</h2>
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <h2 className="text-h2 text-ink mb-6">What Is Answer Engine Optimisation?</h2>
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             Answer Engine Optimisation (AEO) is distinct from traditional SEO. SEO optimises for keyword rankings — your practice ranks on page one for "dental implants London." AEO optimises for being cited by AI engines — ChatGPT, Perplexity, Google AI Overviews, Microsoft Copilot — which synthesise information and present a single authoritative answer.
           </p>
@@ -47,8 +47,8 @@ export default function AeoPage() {
       </section>
 
       <section id="why-2026" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">Why Dental Practices Need AEO in 2026</h2>
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <h2 className="text-h2 text-ink mb-6">Why Dental Practices Need AEO in 2026</h2>
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             The discovery landscape has shifted dramatically. The majority of high-intent dental queries now go to AI engines first. A patient considering implants opens ChatGPT or Perplexity before Google. These AI engines have become primary sources of health information — more trusted than search because they present synthesised expert consensus.
           </p>
@@ -65,26 +65,26 @@ export default function AeoPage() {
       </section>
 
       <section id="infrastructure" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">The AEO Infrastructure Processa Builds</h2>
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <h2 className="text-h2 text-ink mb-6">The AEO Infrastructure Processa Builds</h2>
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
-            <strong className="text-brand-dark">Semantic schema:</strong> Processa deploys structured data (FAQPage, Service, Organization, and Physician JSON-LD) that tells AI engines exactly what services you offer, who provides them, where you operate, and how to contact you.
+            <strong className="text-ink">Semantic schema:</strong> Processa deploys structured data (FAQPage, Service, Organization, and Physician JSON-LD) that tells AI engines exactly what services you offer, who provides them, where you operate, and how to contact you.
           </p>
           <p>
-            <strong className="text-brand-dark">Entity verification:</strong> AI engines cross-reference multiple sources to verify you are who you claim. Your clinic name, address, phone, and credentials must be consistent across website, Google Business Profile, directories, and reviews. Inconsistencies reduce citation probability.
+            <strong className="text-ink">Entity verification:</strong> AI engines cross-reference multiple sources to verify you are who you claim. Your clinic name, address, phone, and credentials must be consistent across website, Google Business Profile, directories, and reviews. Inconsistencies reduce citation probability.
           </p>
           <p>
-            <strong className="text-brand-dark">Authoritative content:</strong> Your site must signal authority on topics you treat. A comprehensive guide written by your practitioner ranks higher for citation than a 400-word blog post. Processa's content architecture builds this depth efficiently.
+            <strong className="text-ink">Authoritative content:</strong> Your site must signal authority on topics you treat. A comprehensive guide written by your practitioner ranks higher for citation than a 400-word blog post. Processa's content architecture builds this depth efficiently.
           </p>
           <p>
-            <strong className="text-brand-dark">Signal consistency:</strong> Website, social profiles, directories, testimonials, and articles should all reinforce the same message. When AI engines find consistency across all touchpoints, your clinic becomes a trusted citation source.
+            <strong className="text-ink">Signal consistency:</strong> Website, social profiles, directories, testimonials, and articles should all reinforce the same message. When AI engines find consistency across all touchpoints, your clinic becomes a trusted citation source.
           </p>
         </div>
       </section>
 
       <section id="implant-invisalign" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">AEO for Implant and Invisalign Practices</h2>
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <h2 className="text-h2 text-ink mb-6">AEO for Implant and Invisalign Practices</h2>
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             Implant and Invisalign represent the highest-value patient segments. Both have high financial commitment, long timelines, and significant education requirements — making them perfect AEO targets. Patients are in deep research mode when they first query AI engines about these treatments.
           </p>
@@ -97,12 +97,12 @@ export default function AeoPage() {
         </div>
       </section>
 
-      <div className="border-t border-slate-200 pt-8">
-        <p className="text-xs font-medium uppercase tracking-wider text-slate-400 mb-4">Related</p>
+      <div className="border-t border-ink/8 pt-8">
+        <p className="text-label font-medium uppercase tracking-widest text-ink/40 mb-4">Related</p>
         <div className="flex flex-wrap gap-3">
-          <Link to="/dental-implant-patient-acquisition" className="text-sm text-brand-dark hover:text-brand-accent transition-colors">Implant Acquisition &rarr;</Link>
-          <Link to="/invisalign-lead-generation" className="text-sm text-brand-dark hover:text-brand-accent transition-colors">Invisalign Leads &rarr;</Link>
-          <Link to="/method" className="text-sm text-brand-dark hover:text-brand-accent transition-colors">14-Day Method &rarr;</Link>
+          <Link to="/dental-implant-patient-acquisition" className="text-sm text-ink/60 hover:text-gold transition-colors">Implant Acquisition &rarr;</Link>
+          <Link to="/invisalign-lead-generation" className="text-sm text-ink/60 hover:text-gold transition-colors">Invisalign Leads &rarr;</Link>
+          <Link to="/method" className="text-sm text-ink/60 hover:text-gold transition-colors">14-Day Method &rarr;</Link>
         </div>
       </div>
     </SubpageLayout>

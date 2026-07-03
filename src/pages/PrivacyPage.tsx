@@ -51,111 +51,52 @@ const SECTIONS = [
 
 export default function PrivacyPage() {
   return (
-    <main style={{ background: '#ffffff', minHeight: '100svh' }}>
+    <main className="section-ivory min-h-screen">
 
       {/* Hero */}
-      <section
-        style={{
-          borderBottom: '1px solid rgba(15,23,42,0.07)',
-          padding: 'clamp(6rem, 12vw, 10rem) 2rem clamp(4rem, 8vw, 6rem)',
-        }}
-      >
-        <div style={{ maxWidth: '720px', margin: '0 auto' }}>
-          <p style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '10px', fontWeight: 400, letterSpacing: '0.26em', textTransform: 'uppercase' as const, color: 'rgba(15,23,42,0.4)', marginBottom: '2rem' }}>
+      <section className="border-b border-ink/7 px-8 pt-[clamp(6rem,12vw,10rem)] pb-[clamp(4rem,8vw,6rem)]">
+        <div className="max-w-[720px] mx-auto">
+          <p className="text-label font-medium uppercase tracking-widest text-ink/40 mb-8">
             Legal
           </p>
-          <h1
-            style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              fontWeight: 700,
-              fontSize: 'clamp(3rem, 7vw, 5rem)',
-              lineHeight: 1.0,
-              letterSpacing: '-0.04em',
-              color: '#0f172a',
-              marginBottom: '1.5rem',
-            }}
-          >
-            Privacy Policy
-          </h1>
-          <p style={{ fontFamily: 'Inter, system-ui, sans-serif', fontSize: '13px', fontWeight: 300, color: 'rgba(15,23,42,0.5)', lineHeight: 1.7 }}>
+          <h1 className="text-h1 text-ink mb-6">Privacy Policy</h1>
+          <p className="text-[13px] text-ink/50 leading-[1.7]">
             Last updated: {LAST_UPDATED} &nbsp;&middot;&nbsp; Processa Advisory &nbsp;&middot;&nbsp; EU GDPR Compliant
           </p>
         </div>
       </section>
 
       {/* Content */}
-      <section style={{ padding: 'clamp(5rem, 10vw, 8rem) 2rem' }}>
-        <div style={{ maxWidth: '720px', margin: '0 auto' }}>
+      <section className="px-8 py-[clamp(5rem,10vw,8rem)]">
+        <div className="max-w-[720px] mx-auto">
 
-          {/* Intro */}
-          <p
-            style={{
-              fontFamily: 'Inter, system-ui, sans-serif',
-              fontSize: '16px',
-              fontWeight: 300,
-              lineHeight: 2,
-              color: '#334155',
-              marginBottom: '4rem',
-              paddingBottom: '3rem',
-              borderBottom: '1px solid rgba(15,23,42,0.07)',
-            }}
-          >
+          <p className="text-body text-ink/65 leading-[2] mb-16 pb-12 border-b border-ink/7">
             This Privacy Policy explains how Processa Advisory collects, processes, stores, and protects your personal data when you visit our website or submit an application for our advisory services. Please read this document carefully. By using this website you confirm that you have read and understood this Policy.
           </p>
 
-          {/* Sections */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '4rem' }}>
+          <div className="flex flex-col gap-16">
             {SECTIONS.map((section, i) => (
               <article key={section.title}>
-                <div style={{ display: 'flex', alignItems: 'baseline', gap: '1.5rem', marginBottom: '1.5rem' }}>
-                  <span
-                    style={{
-                      fontFamily: "'Playfair Display', Georgia, serif",
-                      fontSize: '1.5rem',
-                      fontWeight: 400,
-                      color: 'rgba(15,23,42,0.1)',
-                      lineHeight: 1,
-                      letterSpacing: '-0.03em',
-                      flexShrink: 0,
-                      minWidth: '2ch',
-                    }}
-                  >
+                <div className="flex items-baseline gap-6 mb-6">
+                  <span className="font-display text-2xl font-normal text-ink/10 leading-none tracking-tight flex-shrink-0 min-w-[2ch]">
                     {String(i + 1).padStart(2, '0')}
                   </span>
-                  <h2
-                    style={{
-                      fontFamily: "'Playfair Display', Georgia, serif",
-                      fontWeight: 700,
-                      fontSize: 'clamp(1.25rem, 2.5vw, 1.625rem)',
-                      lineHeight: 1.15,
-                      letterSpacing: '-0.025em',
-                      color: '#0f172a',
-                    }}
-                  >
-                    {section.title}
-                  </h2>
+                  <h2 className="text-h2 text-ink">{section.title}</h2>
                 </div>
-                <div style={{ paddingLeft: 'calc(1.5rem + 2ch)' }}>
-                  {section.body.split('\n').map((para, j) => (
+                <div className="pl-[calc(1.5rem+2ch)]">
+                  {section.body.split('\n').map((para, j) =>
                     para.trim() === '' ? null : (
                       <p
                         key={j}
-                        style={{
-                          fontFamily: 'Inter, system-ui, sans-serif',
-                          fontSize: '14px',
-                          fontWeight: 300,
-                          lineHeight: 1.95,
-                          color: para.startsWith('•') ? '#334155' : '#475569',
-                          marginBottom: '0.75rem',
-                        }}
+                        className={`text-sm leading-[1.95] mb-3 ${para.startsWith('•') ? 'text-ink/70' : 'text-ink/55'}`}
                       >
                         {para}
                       </p>
                     )
-                  ))}
+                  )}
                 </div>
                 {i < SECTIONS.length - 1 && (
-                  <div style={{ marginTop: '4rem', height: '1px', background: 'rgba(15,23,42,0.06)' }} />
+                  <div className="mt-16 h-px bg-ink/6" />
                 )}
               </article>
             ))}
@@ -165,9 +106,9 @@ export default function PrivacyPage() {
       </section>
 
       {/* CTA band */}
-      <section className="bg-brand-surface py-16 px-5">
+      <section className="bg-ink-2 py-16 px-5">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-xl font-bold text-brand-light mb-6">
+          <h2 className="text-h2 text-ivory mb-6">
             Ready to discuss your patient acquisition infrastructure?
           </h2>
           <Link to="/access" className="btn-primary">

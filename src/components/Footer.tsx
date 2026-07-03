@@ -17,32 +17,30 @@ const COMPANY = [
 
 export default function Footer() {
   return (
-    <footer className="bg-brand-dark border-t border-slate-700/30 pt-16 pb-8 px-5">
-      <div className="max-w-7xl mx-auto">
+    <footer className="bg-ink border-t border-ivory/8 pt-16 pb-8 px-5">
+      <div className="max-w-site mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          {/* Brand */}
           <div className="md:col-span-2">
-            <Link to="/" className="text-xl font-bold text-brand-light">
+            <Link to="/" className="text-xl font-bold text-ivory">
               Processa
             </Link>
-            <p className="text-sm text-slate-400 mt-3 max-w-sm leading-relaxed">
+            <p className="text-sm text-ivory/50 mt-3 max-w-sm leading-relaxed">
               AI patient acquisition infrastructure for elite Implant and Invisalign practices across Europe.
             </p>
             <a
               href="mailto:marc@sergiodental.com"
-              className="text-sm text-slate-500 hover:text-brand-accent mt-3 inline-block transition-colors"
+              className="text-sm text-ivory/40 hover:text-gold mt-3 inline-block transition-colors"
             >
               marc@sergiodental.com
             </a>
           </div>
 
-          {/* Services */}
           <div>
-            <p className="text-xs font-medium uppercase tracking-wider text-slate-500 mb-4">Services</p>
+            <p className="text-label font-medium uppercase tracking-widest text-ivory/35 mb-4">Services</p>
             <ul className="space-y-2.5">
               {SERVICES.map(({ to, label }) => (
                 <li key={to}>
-                  <Link to={to} className="text-sm text-slate-400 hover:text-brand-light transition-colors">
+                  <Link to={to} className="text-sm text-ivory/50 hover:text-ivory transition-colors">
                     {label}
                   </Link>
                 </li>
@@ -50,13 +48,12 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Company */}
           <div>
-            <p className="text-xs font-medium uppercase tracking-wider text-slate-500 mb-4">Company</p>
+            <p className="text-label font-medium uppercase tracking-widest text-ivory/35 mb-4">Company</p>
             <ul className="space-y-2.5">
               {COMPANY.map(({ to, label }) => (
                 <li key={to}>
-                  <Link to={to} className="text-sm text-slate-400 hover:text-brand-light transition-colors">
+                  <Link to={to} className="text-sm text-ivory/50 hover:text-ivory transition-colors">
                     {label}
                   </Link>
                 </li>
@@ -65,12 +62,11 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="border-t border-slate-800 pt-6 flex flex-wrap justify-between items-center gap-4">
-          <p className="text-xs text-slate-600">
+        <div className="border-t border-ivory/8 pt-6 flex flex-wrap justify-between items-center gap-4">
+          <p className="text-label text-ivory/25">
             GDPR-aligned &middot; EU-hosted &middot; ISO 27001 infrastructure
           </p>
-          <p className="text-xs text-slate-600">
+          <p className="text-label text-ivory/25">
             &copy; {new Date().getFullYear()} Processa. All rights reserved.
           </p>
         </div>

@@ -1,5 +1,4 @@
 import Hero from '../components/Hero';
-import StatBar from '../components/StatBar';
 import RevenueCalculator from '../components/RevenueCalculator';
 import ThreePillars from '../components/ThreePillars';
 import Timeline from '../components/Timeline';
@@ -11,7 +10,6 @@ export default function HomePage() {
   return (
     <main>
       <Hero />
-      <StatBar />
       <RevenueCalculator />
       <ThreePillars />
       <Timeline />

@@ -29,14 +29,14 @@ export default function DentalImplantPage() {
       }}
     >
       <section id="instant-response" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">Why Implant Enquiries Demand Instant Response</h2>
+        <h2 className="text-h2 text-ink mb-6">Why Implant Enquiries Demand Instant Response</h2>
 
-        <div className="rounded-card border border-slate-200 bg-slate-50 p-5 mb-6 flex items-center gap-4">
-          <span className="text-3xl font-bold text-brand-accent">£3,500+</span>
-          <span className="text-sm text-slate-600">Average per-tooth investment means implant enquiries are inherently high-intent</span>
+        <div className="rounded-card border border-ink/8 bg-ivory-2 p-5 mb-6 flex items-center gap-4">
+          <span className="text-3xl font-bold text-gold">£3,500+</span>
+          <span className="text-sm text-ink/65">Average per-tooth investment means implant enquiries are inherently high-intent</span>
         </div>
 
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             Dental implant cases represent some of the highest-value enquiries a practice receives. A single patient deciding to proceed commits to a significant investment. This high financial commitment means implant enquiries are inherently high-intent: patients are already past the awareness stage and actively evaluating options.
           </p>
@@ -50,9 +50,9 @@ export default function DentalImplantPage() {
       </section>
 
       <section id="lead-generation" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">How Processa Generates Qualified Implant Leads</h2>
+        <h2 className="text-h2 text-ink mb-6">How Processa Generates Qualified Implant Leads</h2>
 
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             Answer Engine Optimisation (AEO) is the foundation. AI search engines now handle the majority of high-intent dental enquiries before they reach traditional search. When a patient asks "best dental implant clinic in Manchester," AI cites one authoritative answer — not ten blue links. If your clinic is cited, the patient finds you.
           </p>
@@ -66,9 +66,9 @@ export default function DentalImplantPage() {
       </section>
 
       <section id="patient-journey" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">The Implant Patient Journey in 2026</h2>
+        <h2 className="text-h2 text-ink mb-6">The Implant Patient Journey in 2026</h2>
 
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             The patient journey has fundamentally shifted. Today, patients begin with an AI query — not a Google search. A patient considering implants types their question into ChatGPT or Perplexity before opening Google. The AI engine presents a single authoritative answer that either names your clinic or doesn't.
           </p>
@@ -82,9 +82,9 @@ export default function DentalImplantPage() {
       </section>
 
       <section id="qualification" className="mb-16">
-        <h2 className="text-h2 text-brand-dark mb-6">Qualifying Implant Candidates Automatically</h2>
+        <h2 className="text-h2 text-ink mb-6">Qualifying Implant Candidates Automatically</h2>
 
-        <div className="space-y-4 text-body text-slate-600 max-w-prose">
+        <div className="space-y-4 text-body text-ink/65 max-w-prose">
           <p>
             Not every implant enquiry is a qualified candidate. Some patients lack bone structure, periodontal health, or financial capacity. Processa deploys a qualification layer that runs in real-time, extracting key signals and immediately assessing treatment eligibility.
           </p>
@@ -97,13 +97,12 @@ export default function DentalImplantPage() {
         </div>
       </section>
 
-      {/* Related */}
-      <div className="border-t border-slate-200 pt-8">
-        <p className="text-xs font-medium uppercase tracking-wider text-slate-400 mb-4">Related</p>
+      <div className="border-t border-ink/8 pt-8">
+        <p className="text-label font-medium uppercase tracking-widest text-ink/40 mb-4">Related</p>
         <div className="flex flex-wrap gap-3">
-          <Link to="/invisalign-lead-generation" className="text-sm text-brand-dark hover:text-brand-accent transition-colors">Invisalign Leads &rarr;</Link>
-          <Link to="/sub-60-second-lead-routing" className="text-sm text-brand-dark hover:text-brand-accent transition-colors">Lead Routing &rarr;</Link>
-          <Link to="/answer-engine-optimisation-dental" className="text-sm text-brand-dark hover:text-brand-accent transition-colors">AEO &rarr;</Link>
+          <Link to="/invisalign-lead-generation" className="text-sm text-ink/60 hover:text-gold transition-colors">Invisalign Leads &rarr;</Link>
+          <Link to="/sub-60-second-lead-routing" className="text-sm text-ink/60 hover:text-gold transition-colors">Lead Routing &rarr;</Link>
+          <Link to="/answer-engine-optimisation-dental" className="text-sm text-ink/60 hover:text-gold transition-colors">AEO &rarr;</Link>
         </div>
       </div>
     </SubpageLayout>
